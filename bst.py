@@ -33,8 +33,44 @@ class BST:
             else:
                 pp.left = node
 
-    def delete_node(self, new_data):
-        pass
+    def largest_in_left(self, cp):
+        cp = cp.left
+        while cp:
+            pp = cp
+            cp = cp.right
+        return pp
+
+    def smallest_in_right(self, cp):
+        cp = cp.right
+        while cp:
+            pp = cp
+            cp = cp.left
+        return pp
+
+    def delete_node(self, old_data):
+        cp = self.root
+        pp = None
+        pp_dir = None
+        while cp:
+            if cp.data < old_data:
+                pp = cp
+                pp_dir = True
+                cp = cp.right
+            elif cp > old_data:
+                pp = cp
+                pp_dir = False
+                cp = cp.left
+            else:
+                # node found
+                if cp.left and cp.right:
+                    # 2nd degree node
+                    rp = largest_in_left(cp)
+                    cp.data = rp.data
+                    delete_by_node(self, rp)
+                elif cp.left:
+
+
+
 
     def search(self, new_data):
         cp = self.root
