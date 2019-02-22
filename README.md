@@ -7,6 +7,6 @@ Data Structures in Python
 - Contains method for breadth-first-search and depth-first-search
 
 ## bst.py
-- Implementation of binary search tree 
-- Contains methods for bst ADT: create, insert, delete, search
+- Implementation of binary-search Tree, AVL Tree and RedBlack Tree
+- Contains methods: create, insert, delete, search
 - Contains all traversal routins: preorder, inorder, postorder and levelorder
